@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int cinput;
+	scanf_s("%d", &cinput);
+	cout << "质因数相乘表达式为" << endl;
+	int j = 2;
+	while (cinput != j)
+	{
+		if (cinput%j == 0)
+		{
+			cout << j << "*";
+			cinput = cinput / j;
+		}
+		else j++;
+	}
+	cout << j;
+	return 0;
+
+
+}
