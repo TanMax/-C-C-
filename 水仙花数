@@ -1,1 +1,21 @@
+//输出所有水仙花数
 
+#include <iostream> 
+#include <math.h>
+using namespace std;
+int main()
+{
+	int hcent, tcent, scent, outnumber;
+
+	for (int i = 100; i<1000; i++)
+	{
+		scent = i % 10;
+		tcent = i / 10 % 10;
+		hcent = i / 100;
+		outnumber = pow(hcent, 3) + pow(tcent, 3) + pow(scent, 3);
+		if (outnumber == i) cout << "水仙花数：" << outnumber << endl;
+
+	}
+	return 0;
+
+}
