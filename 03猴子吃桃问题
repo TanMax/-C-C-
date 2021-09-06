@@ -1,0 +1,14 @@
+#include <iostream> 
+#include <stdio.h>
+#include <math.h>
+using namespace std;
+int main()
+{
+	int d = 1;
+	for (int i = 1; i < 10; i++)
+	{
+		d = (d + 1) * 2;
+	}
+	cout << "第一天吃的桃子数： " << (d / 2 + 1) << endl;
+	return 0;
+}
