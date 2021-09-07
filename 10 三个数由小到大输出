@@ -1,0 +1,23 @@
+#include <stdio.h>;
+
+int main()
+{
+	int a, b, c;
+	scanf_s("%d%d%d", &a, &b, &c);
+	int temp0, temp1;
+	if (a < b)
+	{
+		temp0 = a;
+		a = b;
+		b = temp0;
+	}
+	if (b < c)
+	{
+		temp0 = b;
+		b = c;
+		c = temp0;
+	}
+	printf("由小到大排序：%d %d %d", c,b,a);
+
+	return 0;
+}
