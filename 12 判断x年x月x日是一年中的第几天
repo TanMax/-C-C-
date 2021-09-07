@@ -1,0 +1,28 @@
+//判断x年x月x日是一年中的第几天
+
+#include <stdio.h>;
+
+int main()
+{
+	int days[11] = {31,29,31,30,31,30,31,31,30,31,30};
+	int year, month, day,sumday;
+	printf("请输入年月日，如：2020 11 12\n");
+	scanf_s("%d%d%d", &year, &month, &day);
+	sumday = day;
+	if (month < 2) printf("这是一年中的第：%d 天", day);
+	else 
+	{
+		if (year%400==0 ||(year % 4 == 0 && year % 100 != 0 ))
+		{
+			for (int i = 0; i < month - 1; i++) sumday = sumday + days[i];
+
+		}
+		else
+		{
+			for (int i = 0; i < month - 1; i++) sumday = sumday + days[i];
+			if (month > 3) sumday = sumday - 1;
+		}
+		printf("这是一年中的第：%d 天", sumday);
+	}
+	return 0;
+}
